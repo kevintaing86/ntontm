@@ -7,3 +7,4 @@ x = [
     (11, 12, 13, 14, 15)
 ]
 print(encodesTM([]))
+print(efsn(18))
