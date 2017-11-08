@@ -18,4 +18,24 @@ def functional(table):
                 return False
     return True
 
+def encodesTM(fsn):
+    """
+    Returns true if the fsn can be encoded into a numeric turing machine and false otherwise
+    :param fsn: finite sequence of natural numbers
+    :return: Boolean
+    """
+    if len(fsn) % 5 != 2:
+        return False
+
+    table = []
+    # TODO: get the instruction to match NTM format
+    for x in range(2,len(fsn),5):
+        instruc = (fsn[x], fsn[x+1], fsn[x+2], fsn[x+3], fsn[x+4])
+        table.append(instruc)
+
+    if functional(table):
+        return True
+    else:
+        return False
+
 
