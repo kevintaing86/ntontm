@@ -10,9 +10,9 @@ def numEncodesTM(n):
     :param n: natural number
     :return: boolean
     """
-    fsn = efsn(n)
+    fsn = efsn.efsn(n)
 
-    if encodesTM(fsn):
+    if encodesTM.encodesTM(fsn):
         return True
     else:
         return False
