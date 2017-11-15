@@ -11,6 +11,8 @@ def functional(table):
     :param table: a set of 5-tuples
     :return: Boolean
     """
+    if table == []:
+        return False
     for t1 in table:
         for t2 in table:
             if t1[0:2] == t2[0:2] and t1[2:6] != t2[2:6]:
